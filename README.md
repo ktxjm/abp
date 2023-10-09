@@ -1,39 +1,25 @@
-# Mi Página Web
+# Proyecto ABP Limites, Derivadas e Integrales
 
-Este es el código fuente de mi página web personal. La página está diseñada utilizando HTML, CSS y algunas bibliotecas externas como Materialize, Tailwind CSS y Swiper.
+![GitHub](https://img.shields.io/github/license/TuUsuario/TuRepositorio)
+![GitHub last commit](https://img.shields.io/github/last-commit/TuUsuario/TuRepositorio)
+![GitHub issues](https://img.shields.io/github/issues/TuUsuario/TuRepositorio)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/TuUsuario/TuRepositorio)
 
-## Descripción
+Este es el README para el proyecto ABP (Aprendizaje Basado en Problemas) de "Limites, Derivadas e Integrales", que tiene como objetivo la predicción del valor del Dólar en función del Peso Chileno.
 
-Esta página web incluye las siguientes características y secciones:
+## Descripción del Proyecto
 
-- Un navbar con un menú desplegable para dispositivos móviles.
-- Un slider de citas con imágenes y citas inspiradoras.
-- Una sección de encabezado con información sobre el proyecto.
-- Contenido del informe, incluyendo introducción, objetivos, hipótesis y problemática.
-- Una sección de imágenes con descripciones.
-- Una calculadora de conversión de dólar a pesos chilenos.
+Este proyecto se centra en la predicción de la variación anual del valor del Dólar estadounidense con respecto al Peso Chileno. El Dólar es una de las monedas más utilizadas a nivel global y tiene un gran impacto en la economía chilena. La volatilidad en el valor del Dólar puede tener un efecto significativo en los mercados financieros y la economía en general.
 
-## Capturas de Pantalla
+## Contenido del Repositorio
 
-(Inserta aquí algunas capturas de pantalla de tu página web para mostrar cómo se ve en acción)
+- Carpeta "archivos": Contiene archivos de datos y recursos necesarios para el proyecto.
+- Carpeta "img": Contiene imágenes utilizadas en la documentación.
+- "index.html": El archivo principal del proyecto.
+- "estadisticas.py": Código Python para el análisis de datos.
+- "modelo.ipynb": Jupyter Notebook con el modelo de predicción.
 
-## Cómo Usar
+## Instalación
 
-1. Clona este repositorio en tu máquina local.
-2. Abre el archivo `index.html` en tu navegador para ver la página web en acción.
+Puedes clonar este repositorio utilizando el siguiente comando:
 
-## Tecnologías Utilizadas
-
-- HTML
-- CSS
-- [Materialize](https://materializecss.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Swiper](https://swiperjs.com/)
-
-## Créditos
-
-- Las imágenes utilizadas en el slider son de dominio público y se pueden encontrar en [Unsplash](https://unsplash.com/).
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
