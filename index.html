@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <!-- Enlaza los estilos de Material-UI (Asegúrate de agregar las dependencias necesarias) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Enlaza la fuente de iconos de Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Incluye el archivo CSS de Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Enlaza la biblioteca Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Estilos personalizados -->
+    <style>
+        /* Estilos personalizados para el navbar */
+        .navbar-bg {
+            background-color: #333; /* Cambio de color a uno más oscuro */
+            position: relative; /* Añade posición relativa para manejar z-index */
+            z-index: 999; /* Valor alto de z-index para que esté por encima de todo */
+        }
+        .navbar-logo {
+            /* Cambio del contenido por un logo */
+        
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 150px; /* Ancho máximo para pantallas pequeñas */
+            height: 60px; /* Altura máxima para pantallas pequeñas */
+        }
+        .navbar-link {
+            color: #fff;
+            font-size: 1rem;
+        }
+        .navbar-link:hover {
+            color: #e0e0e0;
+        }
+        /* Estilos para el icono del menú */
+        .menu-icon {
+            font-size: 1.5rem;
+        }
+        /* Elimina el margen inferior de la imagen de logo */
+        .navbar-logo img {
+            margin-bottom: 0;
+        }
+        /* Estilos personalizados para el slider */
+        .slider-container {
+            position: relative;
+            background-image: url('imagen1.png'); /* Ruta de la imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            height: 500px; /* Altura del slider */
+        }
+        .slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)); /* Fondo con gradiente negro y opacidad del 75% */
+        }
+        .slider-content {
+            position: absolute;
+            top: 70%; /* Ajusta la posición vertical del texto */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+        }
+        .slider-content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            width: 500px;
+        }
+        .slider-content p {
+            font-size: 1rem;
+            margin-top: 1rem; /* Ajusta la distancia entre el título y el párrafo */
+        }
+        .slider-image {
+            max-width: 200px; /* Ajusta el tamaño de la imagen */
+            position: absolute;
+            top: 20%; /* Ajusta la posición vertical de la imagen */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100" style="margin-bottom: 100px; /* Agrega margen inferior */">
+
+<!-- Navbar -->
+<nav class="navbar-bg">
+    <div class="container mx-auto px-4 py-2"> <!-- Agrega un padding en la parte inferior -->
+        <div class="flex justify-between items-center">
+            <div class="navbar-logo" style="background-image: url('logo.png');"></div> <!-- Cambia a un div para mostrar el logo -->
+            <!-- Div para mostrar el icono del menú en pantallas más pequeñas -->
+            <div class="md:hidden">
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                    <!-- Reemplaza la palabra "Menu" por un icono (en este caso, se usa un ícono de hamburguesa) -->
+                    <i class="text-white text-2xl material-icons">menu</i>
+                </a>
+            </div>
+            <!-- Enlaces visibles en pantallas medianas y grandes -->
+            <ul class="hidden md:flex space-x-4 items-center">
+                <li><a href="#" class="text-white text-lg">Inicio</a></li>
+                <li><a href="#" class="text-white text-lg">Acerca</a></li>
+                <li><a href="#" class="text-white text-lg">Servicios</a></li>
+                <li><a href="#" class="text-white text-lg">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Menú desplegable para dispositivos móviles -->
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="#" class="text-white text-lg">Inicio</a></li>
+    <li><a href="#" class="text-white text-lg">Acerca</a></li>
+    <li><a href="#" class="text-white text-lg">Servicios</a></li>
+    <li><a href="#" class="text-white text-lg">Contacto</a></li>
+</ul>
+
+<!-- Slider de citas -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slider-container" style="background-image: url('imagen1.png');">
+            <div class="slider-overlay"></div>
+            <div class="slider-image">
+                <img src="imagen1.png" alt="Imagen 1">
+            </div>
+            <div class="slider-content">
+                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>
+                <p>- Autor 1</p>
+            </div>
+        </div>
+        <div class="swiper-slide slider-container" style="background-image: url('imagen2.png');">
+            <div class="slider-overlay"></div>
+            <div class="slider-image">
+                <img src="imagen1.png" alt="Imagen 1">
+            </div>
+            <div class="slider-content">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+                <p>- Autor 2</p>
+            </div>
+        </div>
+        <div class="swiper-slide slider-container" style="background-image: url('imagen3.png');">
+            <div class="slider-overlay"></div>
+            <div class="slider-image">
+                <img src="imagen1.png" alt="Imagen 1">
+            </div>
+            <div class="slider-content">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+                <p>- Autor 3</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Encabezado de la Sección -->
+<section class="bg-gray-500 text-white py-12 text-center">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Informe de Estabilidad Económica</h2>
+        <p class="text-lg">Descubre cómo la economía chilena se relaciona con el dólar</p>
+    </div>
+</section>
+
+<!-- Contenido del Informe -->
+
+<!-- INTRODUCCIÓN -->
+<section class="py-12 text-center mx-60">
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold mb-4">INTRODUCCIÓN</h3>
+        <p class="text-gray-700">
+            La estabilidad de los precios en los países, son básicamente el objetivo primordial que las autoridades deberían perseguir en el tiempo de sus mandatos. Por ellos aparte de tener en cuenta los factores internos que determinan los niveles de precios dentro de un país, se toman en cuenta también el campo externo, ya que con los años y con el desarrollo de la globalización, la economía de los países se ve afectada también por los sucesos ocurridos en los demás países del mundo. El problema se ha reflejado en la volatilidad de la moneda dólar, la cual es la moneda más usada globalmente y la mayor presencia que tiene en la economía del país.
+        </p>
+    </div>
+</section>
+
+
+<section class="py-12 text-center mx-60">
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold mb-4">OBJETIVOS</h3>
+        <p class="text-gray-700">
+            Producir un modelo matemático que prediga la variación anual del peso chileno con respecto al dólar, a partir de datos pasados y de una función. Con el fin de entender y comprender la conducta de estas variables.
+        </p>
+    </div>
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-lg p-6">
+        <p class="text-gray-700">
+            Producir un modelo matemático que prediga la variación anual del peso chileno con respecto al dólar, a partir de datos pasados y de una función. Con el fin de entender y comprender la conducta de estas variables.
+        </p>
+    </div>
+</section>
+
+<section class="py-12 text-center mx-60">
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold mb-4">HIPOTESÍS</h3>
+        <p class="text-gray-700">
+            A partir del comportamiento presentado por las divisas en estudio durante los últimos 4 años, se predice que el valor del dólar disminuirá su valor, de forma paulatina, demostrando un cambio no grande, sino una estabilización frente a los aumentos de final de año.
+        </p>
+    </div>
+</section>
+
+<section class="py-12 text-center mx-60">
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold mb-4">PROBLEMÁTICA</h3>
+        <p class="text-gray-700">
+            La problemática principal es la fluctuación descontrolada del peso chileno respecto al dólar la cual, si bien no se puede predecir exactamente, se pueden hacer estimaciones del comportamiento que tendrá en el mercado mediante modelos matemáticos, analizando años anteriores con fluctuaciones parecidas, de esta manera, basando la información en los propios datos que entrega el mercado por sí solo.
+        </p>
+    </div>
+</section>
+
+<!-- Solución al problema -->
+<section class="py-12 text-center mx-60">
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold mb-4">SOLUCION AL PROBLEMA</h3>
+        <p class="text-gray-700">
+            Se propone desarrollar un modelo matemático aplicado al cambio del peso chileno con respecto al dólar utilizando Excel. Además, se buscará informar sobre temas económicos relevantes, como la inflación y el comercio, con el fin de prever y enfrentar crisis económicas. La investigación se basará en estudios confiables, datos históricos y análisis exhaustivos de factores económicos.
+        </p>
+    </div>
+</section>
+
+<!-- Sección de Imágenes con Descripción (Vertical) con padding a los lados -->
+<section class="py-12 text-center mx-60 md:px-0">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Datos</h2>
+        
+        <!-- Contenedor de Imágenes y Descripciones -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Imagen 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="img/img1.png" alt="Imagen 1" class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Imagen 1</h3>
+                    <p class="text-gray-700">Descripción de la imagen 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <!-- Imagen 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="img/img2.png" alt="Imagen 2" class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Imagen 2</h3>
+                    <p class="text-gray-700">Descripción de la imagen 2. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- CONCLUSIÓN -->
+<section class="py-12 text-center mx-60">
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold mb-4">CONCLUSIÓN</h3>
+        <p class="text-gray-700">
+            
+        </p>
+    </div>
+</section>
+
+
+
+<!-- Sección de Conversión de Dólar a Pesos Chilenos -->
+<section class="py-12 text-center mx-60 justify-center">
+    <div class="container mx-auto px-4 bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-bold mb-4">Conversión de Dólar a Pesos Chilenos</h3>
+        <label for="monto-dolar" class="text-gray-700">Monto en Dólar (USD):</label>
+        <input type="number" id="monto-dolar" class="center w-full px-3 py-2 border border-gray-300 rounded-lg mb-4" placeholder="Ingrese el monto en dólar">
+        <button id="convertir-btn" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600">Convertir</button>
+        <div id="resultado" class="text-2xl font-bold mt-4 text-gray-700"></div>
+    </div>
+</section>
+
+<!-- JavaScript para realizar la conversión -->
+<script>
+    document.getElementById('convertir-btn').addEventListener('click', function () {
+        const montoDolar = parseFloat(document.getElementById('monto-dolar').value);
+
+        if (isNaN(montoDolar)) {
+            alert('Por favor, ingrese un monto válido en dólar.');
+            return;
+        }
+
+        // Utiliza tu clave de API aquí para realizar la solicitud a la API de tipo de cambio
+        
+        // Reemplaza 'tu_api_key' con tu clave de API
+        const apiKey = 'akMCL01psdZFdKz82xc8WnveuHNxvgZe';
+        const apiUrl = `https://api.apilayer.com/exchangerates_data/latest?base=USD&symbols=CLP&apikey=${apiKey}`;
+
+        // Realiza la solicitud a la API utilizando la clave de API
+        fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            const precioDolar = data.rates.CLP;
+            const montoCLP = montoDolar * precioDolar;
+            document.getElementById('resultado').textContent = `${montoDolar} USD = ${montoCLP.toFixed(2)} CLP`;
+        })
+        .catch(error => {
+            console.error('Error al obtener el precio del dólar:', error);
+            document.getElementById('resultado').textContent = 'Error en la conversión';
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+<!-- Incluye el script de Swiper (Asegúrate de agregar las dependencias necesarias) -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // Inicializa el slider de citas usando Swiper
+    var swiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 5000, // Cambia cada 5 segundos (ajusta según lo necesites)
+        },
+    });
+</script>
+<!-- Incluye el script de Materialize para el menú desplegable -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    // Inicializa el menú desplegable
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+</script>
+</body>
+</html>
