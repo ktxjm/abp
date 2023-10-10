@@ -16,10 +16,6 @@ Este proyecto se centra en la predicción de la variación anual del valor del D
 - Carpeta "archivos": Contiene archivos de datos y recursos necesarios para el proyecto.
 - Carpeta "img": Contiene imágenes utilizadas en la documentación.
 - "index.html": El archivo principal del proyecto.
-- "estadisticas.py": Código Python para el análisis de datos.
-- "modelo.ipynb": Jupyter Notebook con el modelo de predicción.
 
-## Instalación
-
-Puedes clonar este repositorio utilizando el siguiente comando:
+![Eog9c-nXcAYNoRJ](https://github.com/ktxjm/abp/assets/95763487/6c45c334-2300-4e0d-9557-055cc7133140)
 
