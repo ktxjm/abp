@@ -46,12 +46,13 @@
         }
         /* Estilos personalizados para el slider */
         .slider-container {
-            position: relative;
-            background-image: url('imagen1.png'); /* Ruta de la imagen de fondo */
-            background-size: cover;
-            background-position: center;
-            height: 500px; /* Altura del slider */
-        }
+    position: relative;
+    background-image: url('img/fondo.png'); /* Ruta de la imagen de fondo */
+    background-size: contain; /* Ajusta la imagen para que quepa completamente dentro del contenedor */
+    background-position: center;
+    height: 500px; /* Altura del slider (ajusta según tus necesidades) */
+}
+
         .slider-overlay {
             position: absolute;
             top: 0;
@@ -69,7 +70,7 @@
             color: #fff;
         }
         .slider-content h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
             margin-bottom: 1rem;
             width: 500px;
         }
@@ -198,7 +199,7 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <!-- Diapositivas aquí... -->
-        <div class="swiper-slide slider-container" style="background-image: url('img/fondo.png');">
+        <div class="swiper-slide slider-container"">
             <div class="slider-overlay"></div>
             <div class="slider-image">
                 <img src="img/albert.jpg" alt="Imagen 1">
@@ -208,7 +209,7 @@
                 <p>- Albert Einstein</p>
             </div>
         </div>
-        <div class="swiper-slide slider-container" style="background-image: url('img/fondo.png');">
+        <div class="swiper-slide slider-container">
             <div class="slider-overlay"></div>
             <div class="slider-image">
                 <img src="img/jean.jpg" alt="Imagen 2">
@@ -218,7 +219,7 @@
                 <p>- Jean Piaget</p>
             </div>
         </div>
-        <div class="swiper-slide slider-container" style="background-image: url('img/fondo.png');">
+        <div class="swiper-slide slider-container">
             <div class="slider-overlay"></div>
             <div class="slider-image">
                 <img src="img/aristoteles.jpg">
