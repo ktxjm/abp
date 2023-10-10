@@ -78,7 +78,7 @@
             margin-top: 1rem; /* Ajusta la distancia entre el título y el párrafo */
         }
         .slider-image {
-            max-width: 200px; /* Ajusta el tamaño de la imagen */
+            max-width:130px; /* Ajusta el tamaño de la imagen */
             position: absolute;
             top: 20%; /* Ajusta la posición vertical de la imagen */
             left: 50%;
@@ -143,12 +143,26 @@
         overflow: hidden; /* Oculta el desplazamiento horizontal */
     }
 
+     /* Estilos personalizados para el navbar sticky */
+  .navbar-bg.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  /* Añade un espacio para evitar que el contenido se superponga debajo del navbar */
+  body {
+    padding-top: 60px; /* Ajusta según la altura de tu navbar */
+  }
+
     </style>
 </head>
 <body class="bg-gray-100" style="margin-bottom: 100px; /* Agrega margen inferior */" id="inicio">
 
 <!-- Navbar -->
-<nav class="navbar-bg">
+<nav class="navbar-bg sticky top-0 z-50">
     <div class="container mx-auto px-4 py-2"> <!-- Agrega un padding en la parte inferior -->
         <div class="flex justify-between items-center">
             <div class="navbar-logo" style="background-image: url('logo.png');"></div> <!-- Cambia a un div para mostrar el logo -->
@@ -171,6 +185,7 @@
 </nav>
 
 
+
 <!-- Menú desplegable para dispositivos móviles -->
 <ul class="sidenav" id="mobile-nav">
     <li><a href="#inicio" class="text-white text-lg">Inicio</a></li>
@@ -183,34 +198,34 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <!-- Diapositivas aquí... -->
-        <div class="swiper-slide slider-container" style="background-image: url('imagen1.png');">
+        <div class="swiper-slide slider-container" style="background-image: url('img/fondo.png');">
             <div class="slider-overlay"></div>
             <div class="slider-image">
-                <img src="imagen1.png" alt="Imagen 1">
+                <img src="img/albert.jpg" alt="Imagen 1">
             </div>
             <div class="slider-content">
-                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>
-                <p>- Autor 1</p>
+                <h1>"La medida de la inteligencia es la capacidad de cambiar."</h1>
+                <p>- Albert Einstein</p>
             </div>
         </div>
-        <div class="swiper-slide slider-container" style="background-image: url('imagen2.png');">
+        <div class="swiper-slide slider-container" style="background-image: url('img/fondo.png');">
             <div class="slider-overlay"></div>
             <div class="slider-image">
-                <img src="imagen2.png" alt="Imagen 2">
+                <img src="img/jean.jpg" alt="Imagen 2">
             </div>
             <div class="slider-content">
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
-                <p>- Autor 2</p>
+                <h1>"Inteligencia es lo que usas cuando no sabes qué hacer."</h1>
+                <p>- Jean Piaget</p>
             </div>
         </div>
-        <div class="swiper-slide slider-container" style="background-image: url('imagen3.png');">
+        <div class="swiper-slide slider-container" style="background-image: url('img/fondo.png');">
             <div class="slider-overlay"></div>
             <div class="slider-image">
-                <img src="imagen3.png" alt="Imagen 3">
+                <img src="img/aristoteles.jpg">
             </div>
             <div class="slider-content">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-                <p>- Autor 3</p>
+                <h1>La inteligencia consiste no sólo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica."</h1>
+                <p>- Aristóteles</p>
             </div>
         </div>
     </div>
@@ -380,5 +395,26 @@
         var instances = M.Sidenav.init(elems);
     });
 </script>
+
+<script>
+    // Obtiene el elemento del navbar
+    var navbar = document.getElementById("navbar");
+  
+    // Obtiene la posición inicial del navbar
+    var sticky = navbar.offsetTop;
+  
+    // Función para manejar el desplazamiento
+    function handleScroll() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  
+    // Agrega un event listener para el desplazamiento
+    window.addEventListener("scroll", handleScroll);
+  </script>
+  
 </body>
 </html>
